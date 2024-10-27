@@ -1,8 +1,11 @@
 require "http"
 require "json"
+require "dotenv/load"
 
 line_width = 40
 
+pp ENV.fetch("GMAPS_KEY")
+pp ENV.fetch("PIRATE_WEATHER_KEY")
 puts "=" * line_width
 puts "Will you need an umbrella today?".center(line_width)
 puts "=" * line_width
