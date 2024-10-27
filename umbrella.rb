@@ -52,13 +52,15 @@ hourly_data = weather_data.fetch("hourly").fetch("data")
 
 next_twelve_hours = hourly_data[1..12]
 threshold = 0.1
-raining = false
+raining = false 
+# pp next_twelve_hours
 
 # pp next_twelve_hours
 
 next_twelve_hours.each do |hour|
   precip_prob = hour.fetch("precipProbability")
-    if precip_prob > 0.1
+  # pp precip_prob
+    if precip_prob > threshold
       raining = true
     end
 end
